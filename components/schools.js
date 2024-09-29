@@ -6,18 +6,23 @@ function Schools() {
 
   const [searchTerm,setSearchTerm] = useState('')
 
-  const titles = ['المدرسة','عدد الطلاب','عدد الحصص']
+  const titles = ['المدرس','الفصل','عدد الطلاب']
 
-  const { schools, loading, error } = useGlobalState()
+  //const { schools, loading, error } = useGlobalState()
+
+  const teachers = [
+    {name:'خليل سالم علي',class:'الصف الاول',studentsNbr:'100'},
+    {name:'ابراهيم جواد نور',class:'الصف الثاني',studentsNbr:'120'},
+    {name:'اسماعيل محمود خالد',class:'الصف الثالث',studentsNbr:'110'},
+  ]
 
 
     // Filtered students based on search term
-    const filteredSchools = schools.filter((school) => {
-      const searchRating = parseFloat(searchTerm)
+    const filteredTeachers = teachers.filter((teacher) => {
       return(
-        school.school_name.includes(searchTerm) || 
-        (school.school_students === searchRating) || 
-        (school.school_lessons === searchRating)
+        teacher.name.includes(searchTerm) || 
+        teacher.class.includes(searchTerm) || 
+        teacher.studentsNbr.includes(searchTerm)
       )
     })
 
@@ -39,31 +44,13 @@ function Schools() {
           ))}
         </div>
         <div className='students-section-inner-infos'>
-          {loading ? (
-            <div className="loading_spinner">
-              <ClipLoader
-                color={'#955BFE'}
-                loading={loading}
-                size={70}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
+          {filteredTeachers.map((teacher, index) => (
+            <div key={index} className='students-section-inner-info'>
+              <h5>{teacher.name}</h5>
+              <h5>{teacher.class}</h5>
+              <h5>{teacher.studentsNbr}</h5>
             </div>
-          ) : filteredSchools.length > 0 ? (
-            <>
-              {filteredSchools.map((school, index) => (
-                <div key={index} className='students-section-inner-info'>
-                  <h5>{school.school_name}</h5>
-                  <h5>{school.school_students}</h5>
-                  <h5>{school.school_lessons}</h5>
-                </div>
-              ))}
-            </>
-          ) : (
-            <div className="no-results">
-              <h5>لا توجد نتائج للبحث</h5>
-            </div>
-          )}
+          ))}
         </div>     
       </div>
     </div>

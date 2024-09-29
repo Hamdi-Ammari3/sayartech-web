@@ -1,23 +1,29 @@
 import React,{useState} from 'react'
-import ClipLoader from "react-spinners/ClipLoader"
-import { useGlobalState } from '../globalState'
 
 function Students() {
 
   const [searchTerm, setSearchTerm] = useState('')
 
-  const { students, loading, error } = useGlobalState()
+  const students = [
+    {name:'محمد ناصر علي',class:'السنة الاولى',lesson:'الحصة الصباحية',age:'6',status:'وصل'},
+    {name:'يزيد محمود خليل',class:'السنة الرابعة',lesson:'الحصة الصباحية',age:'9',status:'في الطريق'},
+    {name:'ابراهيم ياسر ناصر',class:'السنة الثانية',lesson:'الحصة المسائية',age:'7',status:'وصل'},
+    {name:'اميرة محمد سيد',class:'السنة الثالثة',lesson:'الحصة الصباحية',age:'8',status:'غائب'},
+    {name:'محمد جمال خضر',class:'السنة الاولى',lesson:'الحصة المسائية',age:'6',status:'وصل'},
+    {name:'اشرف كامل احمد',class:'السنة الثالثة',lesson:'الحصة الصباحية',age:'8',status:'وصل'},
+    {name:'فاطمة سالم علي',class:'السنة الثانية',lesson:'الحصة المسائية',age:'7',status:'في الطريق'},
+  ]
 
   
-  const titles = ['الطالب','المدرسة','الجنس','العمر','المسافة']
+  const titles = ['الطالب','الصف','الحصة','العمر','الحالة']
 
    // Filtered students based on search term
     const filteredStudents = students.filter((student) =>
-      student.student_full_name.includes(searchTerm) || 
-      student.student_school.includes(searchTerm) || 
-      student.student_sex.includes(searchTerm) || 
-      student.student_age.includes(searchTerm) || 
-      student.distance_to_school.includes(searchTerm)
+      student.name.includes(searchTerm) || 
+      student.class.includes(searchTerm) || 
+      student.lesson.includes(searchTerm) || 
+      student.age.includes(searchTerm) || 
+      student.status.includes(searchTerm)
     );
 
        // Handle search input change
@@ -36,33 +42,19 @@ function Students() {
           ))}
         </div>
         <div className='students-section-inner-infos'>
-          {loading ? (
-            <div className="loading_spinner">
-              <ClipLoader
-                color={'#955BFE'}
-                loading={loading}
-                size={70}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
+          {filteredStudents.map((student, index) => (
+            <div key={index} className='students-section-inner-info' >
+              <h5>{student.name}</h5>
+              <h5>{student.class}</h5>
+              <h5>{student.lesson}</h5>
+              <h5>{student.age}</h5>
+              <h5
+              className={student.status === 'وصل' ? 'in-school' :
+                student.status === 'في الطريق' ? 'in-route' : 
+                student.status === 'غائب' ? 'absent' : ''}
+              >{student.status}</h5>
             </div>
-          ) : filteredStudents.length > 0 ? (
-            <>
-              {filteredStudents.map((student, index) => (
-                <div key={index} className='students-section-inner-info'>
-                  <h5>{student.student_full_name}</h5>
-                  <h5>{student.student_school}</h5>
-                  <h5>{student.student_sex}</h5>
-                  <h5>{student.student_age}</h5>
-                  <h5>{student.distance_to_school}</h5>
-                </div>
-              ))}
-            </>
-          ) : (
-            <div className="no-results">
-              <h5>لا توجد نتائج للبحث</h5>
-            </div>
-          )}
+          ))}
         </div>
       </div>
     </div>

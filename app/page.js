@@ -2,15 +2,14 @@
 import React,{useState,useEffect} from 'react'
 import {useRouter} from 'next/navigation'
 import ClipLoader from "react-spinners/ClipLoader"
-import '../style.css'
-import Navbar from '../../components/navBar'
-import Main from '../../components/main'
-import Students from '../../components/students'
-import Drivers from '../../components/drivers'
-import Schools from '../../components/schools'
-import Email from '../../components/email'
-import PrivateCarRequest from '../../components/privateCarRequest'
-import { GlobalStateProvider } from '../../globalState'
+import './style.css'
+import Navbar from '../components/navBar'
+import Main from '../components/main'
+import Students from '../components/students'
+import Drivers from '../components/drivers'
+import Schools from '../components/schools'
+import Email from '../components/email'
+import PrivateCarRequest from '../components/privateCarRequest'
 
 const Dashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -57,7 +56,7 @@ useEffect(() => {
         return <Students/>
       case 'السواق':
         return <Drivers/>
-      case 'المدارس':
+      case 'المدرسين':
         return <Schools/>
       case 'ارسال بلاغ':
         return <Email/>
@@ -69,7 +68,6 @@ useEffect(() => {
   }
 
   return (
-    <GlobalStateProvider>
     <div className='dashboard-container'>
       <Navbar/>
       <div className='main-box'>
@@ -97,10 +95,10 @@ useEffect(() => {
               <h4 >السواق</h4>
             </div>
             <div
-              onClick={() => handleSectionSelect('المدارس')}
-              className={activeSection === 'المدارس' ? 'active':''}
+              onClick={() => handleSectionSelect('المدرسين')}
+              className={activeSection === 'المدرسين' ? 'active':''}
             >
-              <h4 >المدارس</h4>
+              <h4 >المدرسين</h4>
             </div>
             
             <div
@@ -124,7 +122,6 @@ useEffect(() => {
         </div>
       </div>
     </div>
-    </GlobalStateProvider>
   )
 }
 

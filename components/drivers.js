@@ -7,17 +7,22 @@ function Drivers() {
 
   const titles = ['السائق','نوع السيارة','موديل السيارة','لوحة السيارة','التقييم']
 
-  const { drivers, loading, error } = useGlobalState()
+  //const { drivers, loading, error } = useGlobalState()
+
+  const drivers = [
+    {name:'اسماعيل احمد خليل',carType:'ستاركس',carModel:'تويوتا',carPlate:'١٢٣٤٥',rating:'4'},
+    {name:'محمود ياسين علي',carType:'ستاركس',carModel:'شيفروليه',carPlate:'١٢٣٤٥',rating:'3'},
+    {name:'جمال صبحي سالم',carType:'ستاركس',carModel:'هيونداي',carPlate:'١٢٣٤٥',rating:'5'},
+  ]
 
     // Filtered students based on search term
     const filteredDrivers = drivers.filter((driver) => {
-      const searchRating = parseFloat(searchTerm)
       return(
-        driver.driver_full_name.includes(searchTerm) || 
-        driver.driver_car_type.includes(searchTerm) || 
-        driver.driver_car_model.includes(searchTerm) || 
-        driver.driver_car_plate.includes(searchTerm) ||
-        (driver.rating === searchRating)
+        driver.name.includes(searchTerm) || 
+        driver.carType.includes(searchTerm) || 
+        driver.carModel.includes(searchTerm) || 
+        driver.carPlate.includes(searchTerm) ||
+        driver.rating.includes(searchTerm)
       )
     })
     
@@ -37,33 +42,15 @@ function Drivers() {
           ))}
         </div>
         <div className='students-section-inner-infos'>
-          {loading ? (
-            <div className="loading_spinner">
-              <ClipLoader
-                color={'#955BFE'}
-                loading={loading}
-                size={70}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
+          {filteredDrivers.map((driver, index) => (
+            <div key={index} className='students-section-inner-info'>
+              <h5>{driver.name}</h5>
+              <h5>{driver.carType}</h5>
+              <h5>{driver.carModel}</h5>
+              <h5>{driver.carPlate}</h5>
+              <h5>{driver.rating}</h5>
             </div>
-          ) : filteredDrivers.length > 0 ? (
-            <>
-              {filteredDrivers.map((driver, index) => (
-                <div key={index} className='students-section-inner-info'>
-                  <h5>{driver.driver_full_name}</h5>
-                  <h5>{driver.driver_car_type}</h5>
-                  <h5>{driver.driver_car_model}</h5>
-                  <h5>{driver.driver_car_plate}</h5>
-                  <h5>{driver.rating === 0 ? '-' : driver.rating}</h5>
-                </div>
-              ))}
-            </>
-          ) : (
-            <div className="no-results">
-              <h5>لا توجد نتائج للبحث</h5>
-            </div>
-          )}
+          ))}
         </div>     
       </div>
     </div>
