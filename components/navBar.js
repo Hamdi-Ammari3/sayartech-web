@@ -8,6 +8,9 @@ const Navbar = () => {
         <div className='navbar_logo_div'>
             <h2>Sayartech</h2>
         </div>
+        <div>
+          <h5>مدرسة النخيل الاهلية</h5>
+        </div>
     </div>
   )
 }

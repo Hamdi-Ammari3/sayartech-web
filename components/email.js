@@ -44,7 +44,7 @@ function Email() {
     <div className='white_card-section-container'>
       <div className='email-headline'>
         <div className='sender-receiver-text'>
-          <h5>بلاغ من المدرسة الى شركة سيارتك</h5>
+          <h5>بلاغ من مدرسة النخيل الاهليةالى شركة سيارتك</h5>
         </div>
       </div>
       <div className='email-main'>
