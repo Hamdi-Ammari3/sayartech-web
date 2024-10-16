@@ -4,7 +4,8 @@ import { Cairo } from 'next/font/google'
 
 const cairo = Cairo({
   subsets:['latin'],
-  weight:['400','700']
+  weight:['400','700'],
+  display:'swap'
 })
 
 export const metadata = {

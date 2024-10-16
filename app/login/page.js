@@ -1,6 +1,7 @@
 "use client"
 import React,{useState} from 'react'
 import '../style.css'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { DB } from '../../firebaseConfig'
@@ -67,6 +68,10 @@ const Login = () => {
             )}
             
           </form>
+        </div>
+        <div className='delete_account_box'>
+          <p>تريد مسح حسابك من على التطبيق؟</p>
+          <Link href='/delete-account'>اضغط هنا</Link>
         </div>
       </div>  
     </div>

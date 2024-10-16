@@ -61,6 +61,17 @@
 .form-box > form > input:focus{
     outline: none;
 }
+.form-box > form > textarea{
+    width:230px;
+    height: 70px;
+    padding: 10px;
+    resize:none;
+    border: 1px solid #dddcdc;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: right;
+    overflow: auto;
+}
 .form-box > form > button{
     width: 250px;
     padding: 10px 0;
@@ -72,6 +83,20 @@
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+}
+.delete_account_box{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+}
+.delete_account_box > * {
+    font-size: 14px;
+}
+.delete_account_box > a {
+    text-decoration: none;
+    margin-right: 10px;
 }
 .dashboard-container{
     height: 100vh;
@@ -93,8 +118,27 @@
 .navbar > div:first-child > h2{
     text-transform: uppercase;
 }
-.navbar > div:last-child{
+.navbar_user_box{
     margin-right: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.navbar_user_box > button{
+    width: 70px;
+    height: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #cccc;
+    box-shadow: -10px 10px 3px -14px rgba(0,0,0,0.5);
+    border-radius: 7px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
 }
 .main-box{
     display: flex;
