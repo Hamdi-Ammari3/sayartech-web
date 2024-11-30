@@ -552,15 +552,13 @@
     color: red;
 }
 @media screen and (max-width:800px){
-    .login-container-box{
-        width:70vw;
-        height:70vh;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .login-box{
+        width:90%;
+        height:90vh;
+    }
+    .privacy-box{
+        width:90%;
+        height:90vh;
     }
     .navbar{
         width: 100vw;
