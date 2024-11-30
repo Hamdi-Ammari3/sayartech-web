@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.login-container{
+.page-container{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
     overflow: hidden;
     background-color: #F4F5FA;
 }
-.login-container-box{
+.login-box{
     width:27vw;
     height:70vh;
     background-color: #fff;
@@ -97,6 +97,25 @@
 .delete_account_box > a {
     text-decoration: none;
     margin-right: 10px;
+}
+.privacy-box{
+    width:50vw;
+    height:90vh;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+.privacy-text{
+    width: 90%;
+}
+.privacy-text > * {
+    margin: 0;
+    text-align: center;
 }
 .dashboard-container{
     height: 100vh;
