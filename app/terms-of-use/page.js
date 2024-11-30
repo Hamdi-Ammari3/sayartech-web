@@ -10,7 +10,7 @@ const termsOfUse = () => {
                 <p>
                 Effective Date: November 26, 2024
                     Welcome to Sayartech!
-                    These Terms of Use govern your use of the Sayartech mobile application (the "App") and related services provided by Sayartech. By accessing or using the App, you agree to these Terms of Use. If you do not agree to these terms, you may not use the App.
+                    These Terms of Use govern your use of the Sayartech mobile application (the App) and related services provided by Sayartech. By accessing or using the App, you agree to these Terms of Use. If you do not agree to these terms, you may not use the App.
                     1. Overview of Our Services
                     Sayartech is a platform designed to connect parents with trusted, professional drivers specializing in transporting children to and from school. The App allows parents to:
                     Register their children, providing relevant details such as name, age, sex, school, and home location.
