@@ -1,25 +1,28 @@
 import React from 'react'
-import { CiLogout } from "react-icons/ci"
-import { useRouter } from 'next/navigation'
 
-const Navbar = () => {
-  const router = useRouter();
-  const logoutHandler = () => {
-    localStorage.removeItem('adminLoggedIn');
-    router.push('/login');
-  }
+const Navbar = ({ setActiveSection }) => {
+
   return (
     <div className='navbar'>
-        <div className='navbar_logo_div'>
-            <h2>Sayartech</h2>
+
+      <div className='section-buttons'>
+        <div className='logo-button' onClick={() => setActiveSection('home')}>
+          <h5>سيارتك</h5>
         </div>
-        <div className='navbar_user_box'>
-          <h5>مدرسة النخيل الاهلية</h5>
-          <button onClick={logoutHandler}>
-            <p>خروج</p>
-            <CiLogout style={{color:'#000',fontSize:15}} />
-          </button>
+
+        <div className='section-button' onClick={() => setActiveSection('about')}>
+          <h5>من نحن</h5>
         </div>
+
+        <div className='section-button' onClick={() => setActiveSection('features')}>
+          <h5>مميزات التطبيق</h5>
+        </div>
+
+        <div className='section-button' onClick={() => setActiveSection('contact')}>
+          <h5>تواصل معنا</h5>
+        </div>
+      </div>
+           
     </div>
   )
 }

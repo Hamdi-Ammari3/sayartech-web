@@ -1,715 +1,89 @@
-#app-container{
-    margin: 0;
+*{
     padding: 0;
-}
-.page-container{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: #F4F5FA;
-}
-.login-box{
-    width:27vw;
-    height:70vh;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.form-title-box{
-    width:30vw;
-    height: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form-title-box > h2{
-    text-transform: uppercase;
-}
-.form-box{
-    width:30vw;
-    height: 50vh;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form-box > form {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.form-box > form > input{
-    width: 250px;
-    padding: 10px 0;
-    border: 1px solid #cccbcb;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-}
-.form-box > form > input:focus{
-    outline: none;
-}
-.form-box > form > textarea{
-    width:230px;
-    height: 70px;
-    padding: 10px;
-    resize:none;
-    border: 1px solid #dddcdc;
-    border-radius: 10px;
-    font-size: 16px;
-    text-align: right;
-    overflow: auto;
-}
-.form-box > form > button{
-    width: 250px;
-    padding: 10px 0;
-    border: none;
-    border-radius: 10px;
-    background-color: #955BFE;
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-}
-.delete_account_box{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-
-}
-.delete_account_box > * {
-    font-size: 14px;
-}
-.delete_account_box > a {
-    text-decoration: none;
-    margin-right: 10px;
-}
-.privacy-box{
-    width:50vw;
-    height:90vh;
-    padding: 10px 0;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-}
-.privacy-text{
-    width: 90%;
-}
-.privacy-text > * {
     margin: 0;
-    text-align: center;
+    box-sizing: border-box;
 }
-.dashboard-container{
-    height: 100vh;
+.container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    background-color: #F4F5FA;
+    align-items: center;
+    justify-content: center;
 }
 .navbar{
-    width: 100vw;
-    height: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.navbar > div:first-child{
-    margin-left: 50px;
-}
-.navbar > div:first-child > h2{
-    text-transform: uppercase;
-}
-.navbar_user_box{
-    margin-right: 50px;
+    height: 15vh;
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: center;
 }
-.navbar_user_box > button{
-    width: 70px;
-    height: 30px;
-    margin-right: 50px;
+.section-buttons{
+    width: 50%;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: space-around;
-    border: 1px solid #cccc;
-    box-shadow: -10px 10px 3px -14px rgba(0,0,0,0.5);
-    border-radius: 7px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-}
-.main-box{
-    display: flex;
-}
-.side-box{
-    width: 20vw;
-    height: 88vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 40px;
-}
-.side-box > div {
-    width: 20vw;
-    height: 70vh;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0%;
-}
-.side-box > div > div {
-    width: 240px;
-    height: 45px;
-    margin-bottom: 25px;
-    border-radius: 0 20px 20px 0;
-    display: flex;
     align-items: center;
-    justify-content: center;
+}
+.section-buttons > div {
     cursor: pointer;
 }
-.side-box > div > div > h4 {
-    font-size: 17px;
+.logo-button > h5 {
+    font-size: 16px;
+}
+.section-button > h5 {
     font-weight: 400;
-}
-.active {
-    background-color: #955BFE;
-    color: #fff!important;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-}
-.inner-box{
-    height: 88vh;
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
 }
 .main-section-container{
-    height:70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-.main_section_stat {
-    width:60vw;
-    height:33vh;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main_section_stat_header_div{
-    width:60vw;
-    height:50px;
+    height: 85vh;
+    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.main_section_stat_header_div > h4 {
-    font-size: 17px;
+.main-section-container > div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-section-text-box > h1{
+    width: 250px;
+    margin-bottom: 25px;
+    font-size: 26px;
     font-weight: 400;
-}
-.main_section_stat_items{
-    width:50vw;
-    height:100px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.main_section_stat_item{
-    display: flex;
-}
-.main_section_stat_item_icon_div{
-    height: 60px;
-    width: 60px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-}
-.main_section_stat_item_icon{
-    font-size: 42px;
-    font-weight: 400;
-    color: #fff;
-}
-.main_section_stat_info_item{
-    height: 60px;
-    width: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.main_section_stat_info_item > h5{
-    margin: 0;
-    font-size: 16px;
-}
-.main_section_stat_info_item > p{
-    margin: 0;
-}
-.main_section_revenue{
-    width:60vw;
-    height:33vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.main_section_revenue > div {
-    width:20vw;
-    height:33vh;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-}
-.main_section_monthly_revenue{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.main_section_monthly_revenue_icon_div{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-}
-.main_section_monthly_revenue_icon{
-    color: #fff;
-}
-.main_section_monthly_revenue_div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.main_section_monthly_revenue_div > p {
-    margin: 0;
-}
-.main_section_monthly_revenue_div > div {
-    height: 35px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-}
-.white_card-section-container{
-    width:70vw;
-    height:70vh;
-    margin-top: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.students-section-inner-titles{
-    height: 60px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #f1f1f1;
-}
-.students-section-inner-title{
-    width: 180px;
     text-align: center;
 }
-.students-section-inner-title_search_input{
-    width: 10vw;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #f1f1f1;
-    border-radius: 10px;
+.main-section-text-box > p{
+    width: 460px;
+    margin-bottom: 25px;
     font-size: 16px;
-    font-weight: 700;
-}
-.students-section-inner-title_search_input:focus{
-    outline: none;
-}
-.students-section-inner-infos{
-    height:50vh;
-    display: flex;
-    flex-direction: column;
-}
-.students-section-inner-info{
-    width:70vw;
-    height: 51px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #f1f1f1;
-}
-.students-section-inner-info > h5 {
     font-weight: 400;
-    width: 180px;
     text-align: center;
 }
-.in-school {
-    color: #56CA00;
-    padding: 5px 0;
-    border-radius: 5px;
-    font-weight: 700!important;
-  }
-  
-  .in-route {
-    color: #FFB400;
-    padding: 5px 0;
-    border-radius: 5px;
-    font-weight: 700!important;
-  }
-  
-  .absent {
-    color: #FF4C51;
-    padding: 5px 0;
-    border-radius: 5px;
-    font-weight: 700!important;
-  }
-.loading_spinner {
-    width: 70vw;
-    height: 60vh;
+.main-section-buttons{
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-  .no-results{
-    height:60vh ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .no-results > h5 {
-    font-weight: 400;
-  }
-  .email-headline{
-    width:70vw;
-    height: 12vh;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .email-headline > div > h5 {
-    font-weight: 700;
-    font-size: 14px;
-  }
-  .email-main{
-    width:70vw;
-    height: 58vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .email-main > textarea {
-    width:50vw;
-    height: 200px;
-    padding: 10px;
-    resize:none;
-    border: 1px solid #dddcdc;
-    font-size: 16px;
-    text-align: right;
-    overflow: auto;
-  }
-  .email-main > textarea:focus{
-    outline: none;
-  }
-  .send_request_button {
-    width: 120px;
-    padding: 10px 0;
-    border: none;
-    border-radius: 10px;
-    background-color: #955BFE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-section-button{
     cursor: pointer;
-  }
-  .email-main > button > h5{
-    font-size: 18px;
-    color: #fff;
-    font-weight: 700;
-    margin: 0;
-  }
-  .email_send_icon{
-    font-size: 18px;
-    color: #fff;
-    margin-left: 10px;
-  }
-  .private_car_request_header{
-    height: 10vh;
-    width:70vw;
+}
+.QRcode-modal-container{
+    width: 100%;
+    height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-  }
-  .private_car_request_header > h4 {
-    margin: 0;
-  }
-.private_car_request_form_div{
-    height: 60vh;
-    width:70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
-.private_car_request_form_date{
-    height: 25vh;
-    width:70vw;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
+.main-section-image-box{
+    width: 50%;
 }
-.private_car_request_form_date > div {
-    height: 10vh;
-    width:20vw;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-}
-.private_car_request_form_date_day_input {
-   width: 250px;
-   padding: 10px 0;
-   border: 1px solid #cccbcb;
-   border-radius: 10px;
-   text-align: center;
-   font-size: 16px;
-   font-weight: 700;
-}
-.private_car_request_form_date_day_input:focus {
-    outline: none;
- }
- .private_car_request_form_date_time_input:focus{
-    outline: none;
- }
-.private_car_request_form_car{
-    height: 25vh;
-    width:70vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.private_car_request_form_car > div{
-    height: 10vh;
-    width:20vw;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-}
-.private_car_request_form_car > div:last-child{
-    width:300px;
-}
-.private_car_request_form_car_carType_input{
-    width: 300px;
-    text-align: center;
-}
-.send_request_button > h5 {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 700;
-    margin: 0;
-}
-.car_request_error_message{
-    position: absolute;
-    top: 10;
-    left: 10;
-    color: red;
-}
-@media screen and (max-width:800px){
-    .login-box{
-        width:90%;
-        height:90vh;
-    }
-    .privacy-box{
-        width:90%;
-        height:90vh;
-    }
-    .navbar{
-        width: 100vw;
-        height: 7vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .navbar > div:first-child{
-        margin-left: 10px;
-    }
-    .navbar > div:last-child{
-        margin-right: 10px;
-    }
-    .main-box{
-        display: flex;
-        flex-direction: column;
-    }
-    .side-box{
-        width: 100vw;
-        height: 12vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .side-box > div {
-        width: 100vw;
-        height: 10vh;
-        margin-top: 0px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .side-box > div > div {
-        height: 25px;
-        margin-bottom: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .side-box > div > div > h4 {
-        font-size: 14px;
-        font-weight: 400;
-        text-align: center;
-    }
-    .inner-box{
-        width: 100vw;
-    }
-    .main-section-container{
-        align-items: center;
-        margin-top: 20px;
-    }
-    .main_section_stat {
-        width:95vw;
-    }
-    .main_section_stat_header_div > h4 {
-        font-size: 15px;
-    }
-    .main_section_stat_items{
-        width:100vw;
-        height:100px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .main_section_revenue{
-        width:100vw;
-        justify-content: space-evenly;
-    }
-    .main_section_revenue > div {
-        width:40vw;
-        height:33vh;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-    }
-    .main_section_monthly_revenue{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .white_card-section-container{
-        width:98vw;
-        height:70vh;
-        margin-top: 10px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: -10px 13px 5px -14px rgba(0,0,0,0.5);
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-    .students-section-inner-infos{
-        height:50vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .students-section-inner-info{
-        width:98vw;
-    }
-    .students-section-inner-info > h5 {
-        font-size: 12px;
-    }
-    .email-headline{
-        width:90vw;
-        justify-content: center;
-      }
-      .email-main{
-        width:100vw;
-        height: 50vh;
-      }
-      .email-main > textarea {
-        width:90vw;
-      }
-      .private_car_request_header{
-        width:100vw;
-      }
-      .private_car_request_form_div{
-        height: 60vh;
-        width:98vw;
-    }
-    .private_car_request_form_date{
-        height: 20vh;
-        width:98vw;
-    }
-    .private_car_request_form_date > div {
-        width:32vw;
-    }
-    .private_car_request_form_date_day_input {
-        width:31vw;
-       font-size: 15px;
-    }
-    .private_car_request_form_car{
-        height: 22vh;
-        width:98vw;
-    }
-    .private_car_request_form_car > div{
-        height: 10vh;
-        width:35vw;
-    }
-    .private_car_request_form_car > div:last-child{
-        width:250px;
-        font-size: 15px;
-    }
-    .send_request_button > h5 {
-        font-size: 16px;
-        color: #fff;
-        font-weight: 700;
-        margin: 0;
-    }
+.main-section-image-box > img {
+    object-fit: contain;
+    border-radius: 7%;
 }
